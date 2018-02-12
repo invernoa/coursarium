@@ -9,3 +9,4 @@ from .models import Course
 admin.site.register(Source)
 admin.site.register(Course)
 admin.site.register(Category)
+
