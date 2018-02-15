@@ -8,7 +8,7 @@ SECRET_KEY = '%!nez$4&4$dm$1b69$5dh2420d3%rv2rl+lh08^ptk9$1g28yh'
 
 DEBUG = False
 
-ALLOWED_HOSTS = [ 'invernoa.pythonanywhere.com', '127.0.0.1', 'coursarium.coloroeu.beget.tech']
+ALLOWED_HOSTS = [ 'invernoa.pythonanywhere.com', '127.0.0.1', 'coursarium.coloroeu.beget.tech', 'coursarium.metropolitain.com']
 
 
 # Application definition
