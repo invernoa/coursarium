@@ -1,0 +1,30 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Course List</h1>
+
+    {% if all_courses %}
+        <div class="container">
+            <div class="row">
+            {%  for course in all_courses %}
+
+                <div class="col-lg-3 text-center">
+                    <div class="course-item">
+                        <div>
+                        <img src="{{ course.image }}" height="220" width="220" border="3">
+                        </div>
+                    <h4><strong><a href="{{ course.get_absolute_url }}">{{ course.course_title }}</a></strong></h4>
+
+
+
+                </div>
+                </div>
+
+    {% endfor %}
+</div>
+
+</div>
+    {% else %}
+      <p>There are no courses in your database. Ira, what the fuck up??.</p>
+    {% endif %}
+{% endblock %}

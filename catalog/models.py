@@ -2,69 +2,80 @@ from django.db import models
 
 # Create your models here.
 from django.db import models
-import uuid
-
-#def generateUUID():
-   # return str(uuid4())
-# Create your models here.
+from django.templatetags.i18n import language
+from django.urls import reverse  # Used to generate URLs by reversing the URL patterns
 
 
 class Category(models.Model):
+    """
+	Model representing a course category (e.g. Science Fiction, Non Fiction).
 	"""
-	Model representing a book genre (e.g. Science Fiction, Non Fiction).
-	"""
-	name = models.CharField(max_length=200, help_text="Enter a course category")
-	
-	def __str__(self):
-		"""
-		String for representing the Model object (in Admin site etc.)
-		"""
-		return self.name
+    category_name = models.CharField(max_length=28, help_text="Enter a course category", blank=True, null=True,
+                                     default=None)
 
-from django.urls import reverse #Used to generate URLs by reversing the URL patterns
+
+    def __str__(self):
+        """
+		String for representing the Model object (in Admin site etc.)
+	 	"""
+        return self.category_name
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
+
+class Language(models.Model):
+    language = models.CharField(max_length=20, blank=True, null=True, default=None)
+
+    def __str__(self):
+        return self.language
+
+
+class Status(models.Model):
+    status = models.CharField(max_length=28, blank=True, null=True, default=None)
+
+    def __str__(self):
+        return self.status
+    class Meta:
+        verbose_name = "Status"
+        verbose_name_plural = "Statuses"
+
+
+class Media(models.Model):
+    picture = models.CharField(max_length=200, blank=True, null=True, default=None )
+
+    def __str__(self):
+        return self.picture
+    class Meta:
+        verbose_name = "Media"
+        verbose_name_plural = "Media"
+
+
 
 class Course(models.Model):
-	"""
-	Model representing a course.
-	"""
-	id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text="Unique ID for this particular book across whole library")
-	title = models.CharField(max_length=200)
-	source = models.ForeignKey('Source', on_delete=models.SET_NULL, null=True)
-	# Foreign Key used because book can only have one sourse, but sources can have multiple courses
-   
-	summary = models.TextField(max_length=1000, help_text="Enter a brief description of the course")
-	
-	category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, help_text="Select a category for this course")
-   
-	# Category class has already been defined so we can specify the object above.
-	
-	def __str__(self):
-		"""
-		String for representing the Model object.
-		"""
-		return self.title
+    # Model representing a course.
+    course_title = models.CharField(max_length=200, blank=True, null=True, default=None)
+    short_description = models.CharField(max_length = 100, blank=True, null=True, default=None )
+    summary = models.TextField(max_length=1000, help_text="Enter a brief description of the course")
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True,
+                                 help_text="Select a category for this course")
+    link = models.CharField(max_length=128, null=True, default=None)
+    language = models.ForeignKey(Language, on_delete=models.SET_NULL, null=True)
+    status = models.ForeignKey(Status, on_delete=models.SET_NULL, null=True)
+    image = models.OneToOneField(Media, on_delete=models.SET_NULL, null=True)
 
-	
-	
-	def get_absolute_url(self):
-		"""
-		Returns the url to access a particular book instance.
-		"""
-		return reverse('course-detail', args=[str(self.id)])      
+    def __str__(self):
+        return (self.id)
 
-class Source(models.Model):
-	name = models.CharField(max_length = 200)
-	link = models.CharField(max_length = 200)     
+    class Meta:
+        verbose_name = "Course"
+        verbose_name_plural = "Courses"
 
-	def get_absolute_url(self):
-		"""
-		Returns the url to access a particular author instance.
-		"""
-		return reverse('source-detail', args=[str(self.id)])
-	
+    def get_absolute_url(self):
+        # Returns the url to access a particular book instance.
+        return reverse('course-detail', args=[str(self.id)])
 
-	def __str__(self):
-		"""
-		String for representing the Model object.
-		"""
-		return '{0} ({1})'.format (self.name, self.link)
+
+
+
+
+

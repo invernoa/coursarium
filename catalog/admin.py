@@ -1,12 +1,28 @@
 from django.contrib import admin
 
-# Register your models here.
 from django.contrib import admin
-from .models import Source
-from .models import Category
-from .models import Course
+from .models import Course, Category, Language, Status, Media
 
-admin.site.register(Source)
-admin.site.register(Course)
+
 admin.site.register(Category)
+admin.site.register(Language)
+admin.site.register(Status)
 
+class CourseAdmin(admin.ModelAdmin):
+
+    list_display = ["id", "course_title", "category", "language"]
+    list_filter = ["category", "language"]
+    search_fields = ["course_title"]
+
+    class Meta:
+        model = Course
+
+admin.site.register(Course, CourseAdmin)
+
+class MediaAdmin(admin.ModelAdmin):
+    list_display = ["id", "picture"]
+
+    class Meta:
+        model = Media
+
+admin.site.register(Media,MediaAdmin )

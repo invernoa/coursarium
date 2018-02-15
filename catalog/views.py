@@ -1,24 +1,29 @@
 from django.shortcuts import render
-
+from django.core.paginator import Paginator
 # Create your views here.
-def course_list(request):
-    return render(request, 'catalog/course_list.html', {})
-
-from .models import Course, Source, Category
+from catalog.models import Course, Category, Language, Media
 
 def index(request):
-    """
-    Функция отображения для домашней страницы сайта.
-    """
-    # Генерация "количеств" некоторых главных объектов
-    num_courses=Course.objects.all().count()
-    
-    num_sources=Source.objects.count()  # Метод 'all()' применен по умолчанию.
-    
-    # Отрисовка HTML-шаблона index.html с данными внутри 
-    # переменной контекста context
+    courses = Course.objects.all().order_by('-id')[:9]
+    #Render the HTML template index.html with the data in the context variable.
     return render(
         request,
         'index.html',
-        context={'num_courses':num_courses,'num_sources':num_sources},
+        context = {'courses': courses},
     )
+
+
+
+from django.views import generic
+
+
+class CourseListView(generic.ListView):
+    model = Course
+    context_object_name = 'all_courses'
+    queryset = Course.objects.all()
+    template_name = 'catalog/course_list.htlm'
+
+
+
+class CourseDetailView(generic.DetailView):
+    model = Course
