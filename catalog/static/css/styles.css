@@ -16,11 +16,14 @@ img {
   background-color: #604c8d;
 
 }
+.navbar-header{
+  height: 100px;
 
+}
 .colortext {
   color: white;
   font-size: 20pt;
-  font-family: 'Lobster';
+  font-family: 'PT Sans Narrow', sans-serif;
 
 }
 

@@ -1,5 +1,5 @@
 {% extends "base_generic.html" %}
-{% block categorsearch %} {% endblock %}
+
 
 
 {% block content %}

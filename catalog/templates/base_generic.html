@@ -9,9 +9,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet" type="text/css">
   <!-- Добавление дополнительного статического CSS файла -->
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
 </head>
 
 <body>
@@ -19,9 +21,41 @@
 {% include 'navbar.html' %}
 
 
+{% block search %}
+<div class="container top">
+	<div class="row text-center">
+		<div class="col-md-9 col-md-offset-2">
+            <div class="container-fluid">
+ 			 <ul class="nav navbar-nav">
+      			<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Категории<span class="caret"></span></a>
+         		<ul class="dropdown-menu" role="menu">
+            		<li><a href="#">Гуманитарные науки</a></li>
+		            <li><a href="#">Бизнес, экономика, финансы</a></li>
+		            <li><a href="#">Компьютерные науки</a></li>
+		            <li><a href="#">Наука о данных</a></li>
+		            <li><a href="#">Информационные технологии</a></li>
+		            <li><a href="#">Социальные науки</a></li>
+		            <li><a href="#">Химия и биология</a></li>
+		            <li><a href="#">Физические науки и инжинерия</a></li>
+		            <li><a href="#">Математика и логика</a></li>
+		            <li><a href="#">Изучение языков</a></li>
+         		</ul>
+        	</li>
+      	</ul>
+      <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search" style="width:350px">
+          </div>
+            <button type="submit" class="btn btn-outline-primary">Искать</button>
+      </form>
+            </div>
+        </div>
+    </div>
+</div>
+  <hr>
+{% endblock %}
 
 
-{% block categorsearch %} {% endblock %}
 
 {% block content %} {% endblock %}
 {%  include 'footer.html' %}
