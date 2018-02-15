@@ -8,17 +8,13 @@
         <div class="container">
             <div class="row">
             {%  for course in all_courses %}
-
                 <div class="col-lg-3 text-center">
                     <div class="course-item_in_list">
                         <div>
-                        <img src="{{ course.image }}" height="220" width="220" border="3">
+                            <img src="{{ course.image }}" height="220" width="220" border="3">
                         </div>
                     <h4><strong><a href="{{ course.get_absolute_url }}">{{ course.course_title }}</a></strong></h4>
-
-
-
-                </div>
+                    </div>
                 </div>
 
     {% endfor %}
