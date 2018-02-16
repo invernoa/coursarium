@@ -24,9 +24,7 @@ img {
   height: 90px;
 }
 
-.descript_card {
-  border: 10px;
-}
+
 .navbar-header{
   height: 100px;
 
@@ -92,4 +90,8 @@ a.navbar-brand:hover {
 }
 .fotter_pre{
   height: 100px;
+}
+
+.col-lg-5 {
+  background-color: white ;
 }

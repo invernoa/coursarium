@@ -47,8 +47,6 @@
     </div>
   </div>
 
-
-
     <div class="container">
         <div class="row">
         {% for course in courses %}
@@ -61,8 +59,32 @@
                 </div>
             </div>
         {% endfor %}
+        </div>
     </div>
-</div>
+
+    <div class = "container">
+    <div class="row">
+        <div class="text-center col-lg-12 ">
+            <div class="well">
+                <span class="colortext"><strong> Скоро начнутся </strong>
+            </div>
+        </div>
+    </div>
+  </div>
+    <div class="container">
+        <div class="row">
+        {% for course in startingsoon %}
+            <div class="col-sm-4 text-center">
+                <div class="course-item">
+                    <div>
+                        <img src="{{ course.image }}" height="220" width="220" border="3">
+                    </div>
+                    <h4><strong><a href="{{ course.get_absolute_url }}">{{ course.course_title }}</a></strong></h4>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
 
 {% endblock %}
 

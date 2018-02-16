@@ -23,7 +23,7 @@ class Language(models.Model):
 class Status(models.Model):
     status = models.CharField(max_length=28, blank=True, null=True, default=None)
     def __str__(self):
-        return self.status
+        return self.id
     class Meta:
         verbose_name = "Status"
         verbose_name_plural = "Statuses"
