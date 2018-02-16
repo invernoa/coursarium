@@ -1,0 +1,7 @@
+сервер: coloroeu.beget.tech
+логин: coloroeu_iv
+пароль: abcd_12345
+
+
+ssh localhost -p222
+снова пароль: abcd_12345
