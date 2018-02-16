@@ -58,9 +58,9 @@ WSGI_APPLICATION = 'coursarium.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'catalogdb',
-        'USER': 'djangouser',
-        'PASSWORD': '11111'
+        'NAME': 'coloroeu_cm',
+        'USER': 'coloroeu_cm',
+        'PASSWORD': '111111'
         }
     }
 
