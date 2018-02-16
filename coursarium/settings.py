@@ -6,7 +6,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%!nez$4&4$dm$1b69$5dh2420d3%rv2rl+lh08^ptk9$1g28yh'
 
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [ 'invernoa.pythonanywhere.com', '127.0.0.1', 'coursarium.coloroeu.beget.tech', 'coursarium.metropolitain.com']
 
