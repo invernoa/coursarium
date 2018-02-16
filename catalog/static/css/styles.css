@@ -1,5 +1,5 @@
 .html, body {
-  background-color: #eeeeee;
+  background-color: #fafafa;
 }
 
 img {
@@ -13,20 +13,38 @@ img {
   height: 320px;
 }
 .well {
-  background-color: #604c8d;
+  background-color: #c2c2c2;
 
+}
+.col-lg-7{
+  background-color: white;
+  padding: 20px;
+}
+.title_in_detail{
+  height: 90px;
+}
+
+.descript_card {
+  border: 10px;
 }
 .navbar-header{
   height: 100px;
 
 }
+
 .colortext {
   color: white;
   font-size: 20pt;
   font-family: 'PT Sans Narrow', sans-serif;
 
 }
+.navbar-default .navbar-brand {
+  color: white;
+}
 
+.navbar-brand:hover a{
+  color: white;
+}
 .course-item {
   background-color: white;
   position: relative;
@@ -46,19 +64,32 @@ img {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
+
 }
-
-
-.btn-info {
-  padding: 3px;
-  background-color: #604c8d;
+.colortop {
+  background-color: #604C8D;
+}
+.navbar-header{
+  background-color: #604C8D;
 }
 
 .col-lg-3 {
   height: 320px;
 }
 
+.navbar-brand {
+  font-family: 'Patua One', cursive;
+  font-size: 50px;
+
+   }
 .pic {
   height: 200px;
   width: 200px;
+}
+
+.foot {
+  background-color: white;
+}
+.fotter_pre{
+  height: 100px;
 }
