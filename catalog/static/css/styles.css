@@ -42,8 +42,8 @@ img {
   color: white;
 }
 
-.navbar-brand:hover a{
-  color: white;
+a.navbar-brand:hover {
+  color: lightgray;
 }
 .course-item {
   background-color: white;
