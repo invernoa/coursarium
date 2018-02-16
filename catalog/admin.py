@@ -4,7 +4,7 @@ from django.contrib import admin
 from .models import Course, Category, Language, Status, Media
 
 
-admin.site.register(Category)
+
 admin.site.register(Language)
 admin.site.register(Status)
 
@@ -26,3 +26,10 @@ class MediaAdmin(admin.ModelAdmin):
         model = Media
 
 admin.site.register(Media,MediaAdmin )
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ["id", "category_name"]
+
+    class Meta:
+        model = Category
+admin.site.register(Category, CategoryAdmin)
