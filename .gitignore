@@ -6,3 +6,15 @@
 +/static
 +.DS_Store
 /myvenv
+.htaccess
+.wget-hsts
+passenger_wsgi.py
+.bash_history
+/tmp
+/__pycache__
+/.local
+static
+/.beget
+/.cache
+/.ssh
+/coursarium/settings.py
