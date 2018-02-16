@@ -7,7 +7,10 @@ SECRET_KEY = '%!nez$4&4$dm$1b69$5dh2420d3%rv2rl+lh08^ptk9$1g28yh'
 
 
 DEBUG = True
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5acffc75f7acfc03a39b9d32cc088c71feb1eb08
 
 ALLOWED_HOSTS = [ 'invernoa.pythonanywhere.com', '127.0.0.1', 'coursarium.coloroeu.beget.tech', 'coursarium.metropolitain.com']
 

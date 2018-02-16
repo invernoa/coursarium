@@ -2,20 +2,27 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 {% extends "base_generic.html" %}
 {% block content %}
-
-    <div class = "container">
+    <div class = "container-fluid">
         <div class = "row">
-            <div class = "text-center col-lg-3 ">
+            <nav class="navbar navbar-default">
+      <div class="container-fluid ">
+          <div class="navbar-alltitle ">
+            <a class="navbar-all" href = "/catalog/courses/">Все курсы</a>
+          </div>
+        </div>
+    </nav>
+            <div class = "text-center col-lg-4 ">
                 <div class = "title_in_detail">
                     <h1>{{ course.course_title }}</h1>
                 </div>
             </div>
         </div>
+
         <div class = "row">
-            <div class = "col-lg-4">
+            <div class = "col-lg-3">
                 <img src = "{{ course.image }}" height="300" width="300"  >
             </div>
-            <div class = "col-lg-7">
+            <div class = "col-lg-5">
             <div class = "descript_card">
                 <p><strong>Категория:</strong> {{ course.category }}</p>
                 <p><strong>Язык:</strong> {{ course.language }}</p>
