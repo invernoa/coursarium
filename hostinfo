@@ -5,3 +5,5 @@
 
 ssh localhost -p222
 снова пароль: abcd_12345
+
+touch tmp/restart.txt
