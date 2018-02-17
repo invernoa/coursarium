@@ -7,20 +7,21 @@
       <div class="container">
         <h1>{{ course.course_title }}</h1>
 
-        <p><a class="btn btn-default" href="/catalog/courses/" role="button">Весь список курсов&raquo;</a></p>
+        <p><a class="btn btn-default col-lg-2 col-lg-offset-1" href="/catalog/courses/" role="button">Весь список курсов&raquo;</a>
+            <a class="btn btn-primary col-lg-2" href={{ course.link }}" role="button">Поступить на курс&raquo;</a></p>
       </div>
 </div>
-
+<div class = "container">
         <div class = "row">
             <div class = "col-lg-3">
-                <img src = "{{ course.image }}" height="300" width="300"  >
+                <img src = "{{ course.image }}" height="320" width="320"  >
             </div>
-            <div class = "col-lg-5">
+            <div class = "col-lg-7 col-lg-offset-1">
             <div class = "descript_card">
-                <p><strong>Категория:</strong> {{ course.category }}</p>
-                <p><strong>Язык:</strong> {{ course.language }}</p>
-                <p><strong>Статус курса:</strong> {{ course.status }}</p>
-                <p>{{ course.summary }}</p>
+                <p><h4><strong>Категория:</strong></h4> {{ course.category }}</p>
+                <p><h4><strong>Язык:</strong> </h4>{{ course.language }}</p>
+                <p><h4><strong>Статус курса:</strong></h4> {{ course.status.status }}</p>
+                <p><h4><strong>О курсе:</strong></h4>{{ course.summary }}</p>
             </div>
         </div>
     </div>
