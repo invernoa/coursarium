@@ -4,7 +4,7 @@ from django.core.paginator import Paginator
 from catalog.models import Course, Category, Language, Media
 
 def index(request):
-    courses = Course.objects.all().order_by('-id')[9:20]
+    courses = Course.objects.all().order_by('id')[1:9]
     categories = Category.objects.all()
     startingsoon = Course.objects.all().filter(status=2)
     #Render the HTML template index.html with the data in the context variable.

@@ -4,7 +4,7 @@
 
 {% block content %}
 
-     {% block search %}
+{% block search %}
 <div class="container top">
 	<div class="row text-center">
 		<div class="col-md-9 col-md-offset-2">
@@ -12,16 +12,16 @@
  			 <ul class="nav navbar-nav">
       			<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Категории<span class="caret"></span></a>
          		<ul class="dropdown-menu" role="menu">
-            		<li><a href="#">Гуманитарные науки</a></li>
-		            <li><a href="#">Бизнес, экономика, финансы</a></li>
-		            <li><a href="#">Компьютерные науки</a></li>
-		            <li><a href="#">Наука о данных</a></li>
-		            <li><a href="#">Информационные технологии</a></li>
-		            <li><a href="#">Социальные науки</a></li>
-		            <li><a href="#">Химия и биология</a></li>
-		            <li><a href="#">Физические науки и инжинерия</a></li>
-		            <li><a href="#">Математика и логика</a></li>
-		            <li><a href="#">Изучение языков</a></li>
+            		<li><a href="/catalog/category/1">Наука о данных</a></li>
+		            <li><a href="/catalog/category/2">Бизнес, экономика, финансы</a></li>
+		            <li><a href="/catalog/category/3">Математика и логика</a></li>
+		            <li><a href="/catalog/category/4">Физика и инженерия</a></li>
+		            <li><a href="/catalog/category/5">Изучение языков</a></li>
+		            <li><a href="/catalog/category/6">Химия и биология</a></li>
+		            <li><a href="/catalog/category/7">Социальные науки</a></li>
+		            <li><a href="/catalog/category/8">Компьютерные технологии</a></li>
+		            <li><a href="/catalog/category/9">Гуманитарные науки</a></li>
+		            <li><a href="/catalog/category/10">Информационные технологии</a></li>
          		</ul>
         	</li>
       	</ul>
@@ -37,6 +37,7 @@
 </div>
   <hr>
 {% endblock %}
+
 
     {% if all_courses %}
         <div onclick="location.href='{{  course.get_absolute_url }}'">
