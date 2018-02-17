@@ -71,6 +71,7 @@ a.navbar-brand:hover {
 }
 .navbar-header{
   background-color: #604C8D;
+  padding: 20px;
 }
 
 .col-lg-3 {
