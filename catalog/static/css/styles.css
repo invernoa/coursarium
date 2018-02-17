@@ -6,7 +6,7 @@ img {
   padding: 12px;
 }
 .body {
-  padding-left: 15px;
+  padding-left: 45px;
 
 }
 .col-sm-4 {
@@ -27,6 +27,7 @@ img {
 
 .navbar-header{
   height: 100px;
+  padding: 20px;
 
 }
 
@@ -38,6 +39,7 @@ img {
 }
 .navbar-default .navbar-brand {
   color: white;
+  padding: 20px;
 }
 
 a.navbar-brand:hover {

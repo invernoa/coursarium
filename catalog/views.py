@@ -43,6 +43,7 @@ class CourseListView(generic.ListView):
 
 
 
+
 class CourseDetailView(generic.DetailView):
     model = Course
     template_name = 'catalog/course_detail.html'
